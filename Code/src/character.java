@@ -12,5 +12,15 @@ public class character {
     character(int size){
         this.size = size;
     }
+
+    public Queue<String> getLines() {
+        Queue<String> gcodeLines = new LinkedList<>();
+        for(int i = 0; i < points.size(); i ++){
+            gcodeLines.add(points.peek().toString());
+            points.add(points.remove());
+        }
+
+        return gcodeLines;
+    }
 }
 
