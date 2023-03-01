@@ -6,8 +6,6 @@ G1 X110 Y110 ; go to center
 G0 Z0 ; lower to 0
 
 ; Stuff Go Here
-G3 X2 Y7 I-4 J-3 E2
-
 
 G1 Z10 ;Raise Z
 G90 ;Absolute positioning
