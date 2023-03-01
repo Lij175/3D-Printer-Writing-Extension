@@ -1,4 +1,3 @@
-import java.util.Queue;
 
 public class square extends character{
 
@@ -8,19 +7,14 @@ public class square extends character{
 
     square(int size){
         super(size);
-
-        int[] arr = {0 * size, 0 * size};
-        points.add(arr);
-
-        int[] arr1 = {1 * size, 0 * size};
-        points.add(arr1);
-
-        int[] arr2 = {1 * size, 1 * size};
-        points.add(arr2);
-
-        int[] arr3 = {0 * size, 1 * size};
-        points.add(arr3);
+        points = new int[4][2];
+        points[0] = new int[] {0 * size,0 * size};
+        points[1] = new int[] {1 * size,0 * size};
+        points[2] = new int[] {1 * size,1 * size};
+        points[3] = new int[] {0 * size,1 * size};
     }
+
+    
 
     
 }

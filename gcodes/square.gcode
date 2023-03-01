@@ -6,11 +6,11 @@ G0 X110 Y110 ; go to center
 G0 Z0 ; lower to 0
 
 ; Stuff Go Here
-[I@3cb5cdba
-[I@56cbfb61
-[I@1134affc
-[I@d041cf
-[I@3cb5cdba
+G0 X0 Y0
+G0 X1 Y0
+G0 X1 Y1
+G0 X0 Y1
+G0 X0 Y0
 
 G1 Z10 ;Raise Z
 G90 ;Absolute positioning

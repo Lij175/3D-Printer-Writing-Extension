@@ -3,7 +3,7 @@ import java.util.Queue;
 
 public class character {
     int size;
-    Queue<int[]> points = new LinkedList<>();
+    int[][] points;
 
     character(){
         size = 1;
@@ -15,9 +15,8 @@ public class character {
 
     public Queue<String> getLines() {
         Queue<String> gcodeLines = new LinkedList<>();
-        for(int i = 0; i < points.size(); i ++){
-            gcodeLines.add(points.peek().toString());
-            points.add(points.remove());
+        for(int i = 0; i < points.length; i ++){
+            gcodeLines.add("G0 X" + points[i][0] + " Y" + points[i][1]);
         }
 
         return gcodeLines;
