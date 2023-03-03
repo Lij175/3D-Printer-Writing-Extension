@@ -6,7 +6,7 @@ import java.util.Scanner;
 
 
 
-// IMPORTANT REMEMBER THIS:
+// IMPORTANT!! REMEMBER THIS:
 // 50 < X < 220
 // 50 < Y < 220
 public class PrinterWritingExtention {
@@ -15,13 +15,12 @@ public class PrinterWritingExtention {
 	public static void main(String[] args) throws FileNotFoundException {
 
 		// files and stuff
-		//File skeleton = new File("C:\\Users\\1082635\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\WitingBaseCode.gcode");
-		//File box_gcode = new File("C:\\Users\\1082635\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\box.gcode");
+		File skeleton = new File("C:\\Users\\1082635\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\WitingBaseCode.gcode");
+		File box_gcode = new File("C:\\Users\\1082635\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\text.gcode");
 
-		File skeleton = new File("C:\\Users\\ejyst\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\WitingBaseCode.gcode");
-		File box_gcode = new File("C:\\Users\\ejyst\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\square.gcode");
+		//File skeleton = new File("C:\\Users\\ejyst\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\WitingBaseCode.gcode");
+		//File box_gcode = new File("C:\\Users\\ejyst\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\text.gcode");
 
-		//?
 		// scanners
 		Scanner skeletonScanner = new Scanner(skeleton);
 		PrintStream ps = new PrintStream(box_gcode);
@@ -32,7 +31,7 @@ public class PrinterWritingExtention {
 		String text = userInput.nextLine();
 
 		System.out.print("font size?: ");
-		int fontSize = userInput.nextInt();
+		double fontSize = userInput.nextDouble();
 
 		//loop to write gcode
 		while (skeletonScanner.hasNext()) {
@@ -83,6 +82,9 @@ public class PrinterWritingExtention {
 			System.out.println(sqareScanner.nextLine());
 		}
 		 */
+
+		 userInput.close();
+		 skeletonScanner.close();
 		
 	}
 

@@ -2,8 +2,8 @@ import java.util.LinkedList;
 import java.util.Queue;
 
 public class character {
-    int size;
-    int[][] points;
+    double size;
+    double[][] points;
     int[] orgin;
     String name;
 
@@ -11,7 +11,7 @@ public class character {
         size = 1;
     }
 
-    character(int size, int[] orgin){
+    character(double size, int[] orgin){
         this.size = size;
         this.orgin = orgin;
     }
