@@ -5,6 +5,7 @@ public class character {
     int size;
     int[][] points;
     int[] orgin;
+    String name;
 
     character(){
         size = 1;
@@ -18,7 +19,7 @@ public class character {
     public Queue<String> getLines() {
         Queue<String> gcodeLines = new LinkedList<>();
         for(int i = 0; i < points.length; i ++){
-            gcodeLines.add("G0 X" + points[i][0] + " Y" + points[i][1]);
+            gcodeLines.add("G0 X" + points[i][0] + " Y" + points[i][1] + " E0.2");
         }
         
         return gcodeLines;
