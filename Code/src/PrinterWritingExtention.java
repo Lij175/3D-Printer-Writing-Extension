@@ -72,7 +72,7 @@ public class PrinterWritingExtention {
 			else{
 				ps.println(nextLine);
 			}
-			
+			// what up its me
 		}
 
 		// print file 
