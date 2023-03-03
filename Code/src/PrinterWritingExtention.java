@@ -21,6 +21,7 @@ public class PrinterWritingExtention {
 		File skeleton = new File("C:\\Users\\ejyst\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\WitingBaseCode.gcode");
 		File box_gcode = new File("C:\\Users\\ejyst\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\square.gcode");
 
+		//?
 		// scanners
 		Scanner skeletonScanner = new Scanner(skeleton);
 		PrintStream ps = new PrintStream(box_gcode);
