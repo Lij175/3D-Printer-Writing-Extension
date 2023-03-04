@@ -3,7 +3,6 @@
 G28 ; Home all axes
 G1 Z2 ; Move Z Axis up little to prevent scratching of Heat Bed
 G1 X110 Y110 ; go to center
-G0 Z0 ; lower to 0
 
 ; Stuff Go Here
 
