@@ -1,4 +1,5 @@
 import java.util.LinkedList;
+import java.util.List;
 
 public class CircleToGcode {
     public static final double pi = 3.1415926;
@@ -13,9 +14,9 @@ public class CircleToGcode {
         double[] start = {0, 0};
         double[] end = {6, 6};
         double[] center = {0, 0};
-        boolean clockwise = !false;
+        boolean clockwise = true;
         double r = 1;
-        int n = 10;
+        int n = 4;
 
 
         LinkedPointList pointsOnCurve = new LinkedPointList();
@@ -41,7 +42,19 @@ public class CircleToGcode {
             }
         }
 
-        System.out.println(pointsOnCurve.toString());
+
+        // make curcular
+        ListNode current = pointsOnCurve.front;
+		while (current.next != null) {
+			current = current.next;
+		}
+		current.next = pointsOnCurve.front;
+
+        ListNode curveStart = new ListNode();
+        current = pointsOnCurve.front;
+        for(int i = 0; i < n + 2 ; i++){
+            
+        }
         
 
     }

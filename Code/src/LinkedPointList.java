@@ -3,7 +3,7 @@ import java.util.NoSuchElementException;
 
 public class LinkedPointList {
 	// fields
-	private ListNode front;
+	ListNode front;
 
 	// Constructs an empty LinkedIntList
 	public LinkedPointList() {
