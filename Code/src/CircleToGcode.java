@@ -1,7 +1,7 @@
 import java.util.LinkedList;
 
 public class CircleToGcode {
-    public static final double pi = 3.14159265358979323846;
+    public static final double pi = 3.1415926;
     public static void main(String[] args) {
         /*
          given a starting point (a,b), and ending point (c,d), 
@@ -12,21 +12,37 @@ public class CircleToGcode {
          */
         double[] start = {0, 0};
         double[] end = {6, 6};
-        double[] center = {0, 6};
-        boolean clockwise = false;
-        double r = 6;
+        double[] center = {0, 0};
+        boolean clockwise = !false;
+        double r = 1;
+        int n = 10;
 
 
-        LinkedList<double[]> pointsOnCurve = new LinkedList<double[]>();
+        LinkedPointList pointsOnCurve = new LinkedPointList();
         if(clockwise){
-            for(int i = 100; i > 0; i --){
-                pointsOnCurve.add(new double[] {r * Math.cos(i * 2 * pi / 100) + center[0], r * Math.sin(i * 2 * pi / 100) + center[1]});
+            for(int i = n; i > 0; i --){
+                double x = r * Math.cos(i * ((2 * pi) / n)) + center[0];
+                double y = r * Math.sin(i * ((2 * pi) / n)) + center[1];
+
+                x = Math.round(x * 10000.0) / 10000.0;
+                y = Math.round(y * 10000.0) / 10000.0;
+
+                pointsOnCurve.add(new double[] {x, y});
             }
         } else{
-            for(int i = 1; i <= 100; i ++){
-                pointsOnCurve.add(new double[] {r * Math.cos(i * 2 * pi / 100) + center[0], r * Math.sin(i * 2 * pi / 100) + center[1]});
+            for(int i = 1; i <= n; i ++){
+                double x = r * Math.cos(i * ((2 * pi) / n)) + center[0];
+                double y = r * Math.sin(i * ((2 * pi) / n)) + center[1];
+
+                x = Math.round(x * 10000.0) / 10000.0;
+                y = Math.round(y * 10000.0) / 10000.0;
+
+                pointsOnCurve.add(new double[] {x, y});
             }
         }
+
+        System.out.println(pointsOnCurve.toString());
+        
 
     }
 }
