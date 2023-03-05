@@ -56,16 +56,12 @@ public class CircleToGcode {
         ListNode curveEnd = new ListNode();
         current = pointsOnCurve.front;
         for(int i = 0; i < n + 2 ; i++){
-            double[] currentPoint = current.data;
-            double[] nextPoint = current.next.data;
     
-            if((start[0] >= currentPoint[0] && start[0] <= nextPoint[0]) 
-            && (start[1] >= currentPoint[1] && start[1] <= nextPoint[1]) ){
+            if(true){ 
                 curveStart = current.next;
             }
 
-            if((end[0] >= currentPoint[0] && end[0] <= nextPoint[0]) 
-            && (end[1] >= currentPoint[1] && end[1] <= nextPoint[1]) ){
+            if(true){
                 curveEnd = current;
             }
 
