@@ -1,3 +1,4 @@
+import java.util.ArrayList;
 import java.util.LinkedList;
 import java.util.List;
 
@@ -11,12 +12,12 @@ public class CircleToGcode {
 
          (r cos(i * 2pi/n) + h, r sin(i * 2pi/n) + k)
          */
-        double[] start = {0, 0};
-        double[] end = {6, 6};
+        double[] start = {-0.49, -.872};
+        double[] end = {0.968, 0.251};
         double[] center = {0, 0};
-        boolean clockwise = true;
+        boolean clockwise = false;
         double r = 1;
-        int n = 4;
+        int n = 10;
 
 
         LinkedPointList pointsOnCurve = new LinkedPointList();
@@ -42,6 +43,7 @@ public class CircleToGcode {
             }
         }
 
+        System.out.println(pointsOnCurve);
 
         // make curcular
         ListNode current = pointsOnCurve.front;
@@ -51,11 +53,35 @@ public class CircleToGcode {
 		current.next = pointsOnCurve.front;
 
         ListNode curveStart = new ListNode();
+        ListNode curveEnd = new ListNode();
         current = pointsOnCurve.front;
         for(int i = 0; i < n + 2 ; i++){
-            
+            double[] currentPoint = current.data;
+            double[] nextPoint = current.next.data;
+    
+            if((start[0] >= currentPoint[0] && start[0] <= nextPoint[0]) 
+            && (start[1] >= currentPoint[1] && start[1] <= nextPoint[1]) ){
+                curveStart = current.next;
+            }
+
+            if((end[0] >= currentPoint[0] && end[0] <= nextPoint[0]) 
+            && (end[1] >= currentPoint[1] && end[1] <= nextPoint[1]) ){
+                curveEnd = current;
+            }
+
+            current = current.next;
         }
+
+        System.out.println("(" + curveStart.x + ", " + curveStart.y + ")");
         
+        ArrayList<double[]> points = new ArrayList<double[]>();
+        current = curveStart;
+        while(current.next != curveEnd){
+            points.add(current.data);
+            current = current.next;
+        }
+
+        System.out.println(points);
 
     }
 }

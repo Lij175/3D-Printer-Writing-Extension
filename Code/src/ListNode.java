@@ -22,9 +22,5 @@ public class ListNode {
         this.x = data[0];
         this.y = data[1];
     }
-    // returns wether or not this node is greater than or equal to other node
-    public boolean isGreaterThanOrEqualTo(ListNode point){
-        return (this.x >= point.x && this.y <= point.y);
-    }
 }
 
