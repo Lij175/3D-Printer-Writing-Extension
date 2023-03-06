@@ -11,11 +11,11 @@ public class CircleToGcode {
          */
 
         double pi = 3.1415926;
-        double start = 2 * pi;
-        double end = 3 * pi / 2;
+        double start = pi;
+        double end = 2 * pi;
         double[] center = {0, 0};
-        boolean clockwise = !false;
-        double r = 1;
+        boolean clockwise = false;
+        double r = 4;
         int n = 50;
 
         ArrayList<double[]> pointsOnCurve = new ArrayList<double[]>();
@@ -45,6 +45,21 @@ public class CircleToGcode {
         for(int i = 0; i < pointsOnCurve.size(); i ++){
             double[] point = pointsOnCurve.get(i);
             System.out.println("(" + point[0] + ", " + point[1] + ")");
+        }
+
+        System.out.println("\nGCODE:");
+
+        double[] prevPoint = new double[] {r * Math.cos(start) + center[0], r * Math.sin(start) + center[1]};
+        for(int i = 0; i < pointsOnCurve.size(); i ++){
+            double[] currPoint = pointsOnCurve.get(i);
+            double x = currPoint[0] - prevPoint[0];
+            double y = currPoint[1] - prevPoint[1];
+
+            x = Math.round(x * 10000.0) / 10000.0;
+            y = Math.round(y * 10000.0) / 10000.0;
+
+            System.out.println("G0 X" + x + " Y" + y + " E0.2");
+            prevPoint = currPoint;
         }
     }
 }
