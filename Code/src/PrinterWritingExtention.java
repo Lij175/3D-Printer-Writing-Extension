@@ -110,4 +110,6 @@ public class PrinterWritingExtention {
 				ps.println("G1 Z1 ; raise a bit");
 	}
 
+	
+
 }
