@@ -16,7 +16,7 @@ public class CircleToGcode {
         double[] center = {0, 0};
         boolean clockwise = !false;
         double r = 1;
-        int n = 20;
+        int n = 50;
 
         ArrayList<double[]> pointsOnCurve = new ArrayList<double[]>();
         if(clockwise){
@@ -44,7 +44,7 @@ public class CircleToGcode {
 
         for(int i = 0; i < pointsOnCurve.size(); i ++){
             double[] point = pointsOnCurve.get(i);
-            System.out.print("(" + point[0] + ", " + point[1] + ") --> ");
+            System.out.println("(" + point[0] + ", " + point[1] + ")");
         }
     }
 }
