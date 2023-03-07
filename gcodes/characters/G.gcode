@@ -2,12 +2,13 @@
 
 G28 ; Home all axes
 G1 Z2 ; Move Z Axis up little to prevent scratching of Heat Bed
-
 ; Stuff Go Here
+
 G0 X110 Y110; go to char orgin
+G0 Z0 ; lower to 0
 G91 ; relitive positioning
 
-; C
+; G
 G1 Z1
 G0 X8 Y9 E0
 G1 Z-1 
@@ -62,6 +63,11 @@ G0 X0.2139 Y0.4545 E0.2
 G0 X0.1552 Y0.4777 E0.2
 G0 X0.0942 Y0.4935 E0.2
 G0 X0.0315 Y0.5013 E0.2
+G1 Z1
+G0 X-4 Y0 E0
+G1 Z-1
+G0 X4 Y0 E0.2
+G0 X0 Y-4 E0.2
 
 G90 ; absolute positioning
 G1 Z1 ; raise a bit
