@@ -11,8 +11,8 @@ public class CircleToGcode {
          */
 
         double pi = 3.1415926;
-        double start = 0;
-        double end = pi / 2;
+        double start = pi;
+        double end = 2 * pi;
         double[] center = {0, 0};
         boolean clockwise = false;
         double r = 4;
