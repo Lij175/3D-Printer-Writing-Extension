@@ -11,15 +11,12 @@ import java.util.Scanner;
 // 50 < Y < 220
 public class PrinterWritingExtention {
 
-	
+	public static String user = "1082635";
 	public static void main(String[] args) throws FileNotFoundException {
 
 		// files and stuff
-		//File skeleton = new File("C:\\Users\\1082635\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\WitingBaseCode.gcode");
-		//File box_gcode = new File("C:\\Users\\1082635\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\text.gcode");
-
-		File skeleton = new File("C:\\Users\\ejyst\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\WitingBaseCode.gcode");
-		File box_gcode = new File("C:\\Users\\ejyst\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\text.gcode");
+		File skeleton = new File("C:\\Users\\" + user + "\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\WitingBaseCode.gcode");
+		File box_gcode = new File("C:\\Users\\" + user + "\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\text.gcode");
 
 		// scanners
 		Scanner skeletonScanner = new Scanner(skeleton);
@@ -50,24 +47,24 @@ public class PrinterWritingExtention {
 
 				for(String word : words){
 					// if word length goes past bound go to new line
-					if(x + (word.length() * (fontSize * 8 + 1)) > 220 ){
+					if(x + (word.length() * (fontSize * 8 + 2)) > 220 ){
 						y -= (fontSize * 13) + 2;
 						x = 50;
 						
 						// if the word is still too long, check each letter before going to the next line
-						if((word.length() * (fontSize * 8 + 1)) > 220){
+						if((word.length() * (fontSize * 8 + 2)) > 220){
 							for(int i = 0; i < word.length();  i ++){
-								if(x + (fontSize * 8 + 1) > 220){
+								if(x + (fontSize * 8 + 2) > 220){
 									y -= (fontSize * 13) + 2;
 									x = 50;
 								}
 								character newChar = new character(fontSize, new int[] {x, y}, word.charAt(i) + "");
 								addNewCharacter(newChar, ps);
-								x += (fontSize * 8) + 1;
+								x += (fontSize * 8) + 2;
 							}
 
 							// space
-							x += (fontSize * 8) + 1;
+							x += (fontSize * 8) + 2;
 							continue;
 						}
 					}
@@ -76,11 +73,11 @@ public class PrinterWritingExtention {
 					for(int i = 0; i < word.length();  i ++){
 						character newChar = new character(fontSize, new int[] {x, y}, word.charAt(i) + "");
 						addNewCharacter(newChar, ps);
-						x += (fontSize * 8) + 1;
+						x += (fontSize * 8) + 2;
 					}
 
 					// space
-					x += (fontSize * 8) + 1;
+					x += (fontSize * 8) + 2;
 				}
 				
 			} 
@@ -106,30 +103,31 @@ public class PrinterWritingExtention {
 	}
 
 	public static void addNewCharacter(character newChar, PrintStream ps) throws FileNotFoundException{;
-				// one character
-				ps.println();
-				ps.println("G0 X" + newChar.orgin[0] + " Y" + newChar.orgin[1] + "; go to char orgin");
-				ps.println("G0 Z0 ; lower to 0");
-				ps.println("G91 ; relitive positioning");
+		// one character
+		ps.println();
+		ps.println("G0 X" + newChar.orgin[0] + " Y" + newChar.orgin[1] + "; go to char orgin");
+		ps.println("G0 Z0 ; lower to 0");
+		ps.println("G91 ; relitive positioning");
 
-				ps.println();
+		ps.println();
 
-				File gcode;
-				Scanner gcodeScanner;
-				try {
-					gcode = new File("C:\\Users\\ejyst\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\characters\\" + newChar.name + ".gcode");
-					gcodeScanner = new Scanner(gcode);
-				} catch (Exception FileNotFoundException) {
-					gcode = new File("C:\\Users\\ejyst\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\characters\\box.gcode");
-					gcodeScanner = new Scanner(gcode);
-				}
+		File gcode;
+		Scanner gcodeScanner;
+		try {
+			gcode = new File("C:\\Users\\" + user + "\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\characters\\" + newChar.name + ".gcode");
+			gcodeScanner = new Scanner(gcode);
+		} catch (Exception FileNotFoundException) {
+			gcode = new File("C:\\Users\\" + user + "\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\characters\\box.gcode");
+			gcodeScanner = new Scanner(gcode);
+		}
 				
-				while(gcodeScanner.hasNext()){
-					 ps.println(gcodeScanner.nextLine());
-				}
+		while(gcodeScanner.hasNext()){
+			 ps.println(gcodeScanner.nextLine());
+		}
 
-				ps.println("G90 ; absolute positioning");
-				ps.println("G1 Z1 ; raise a bit");
+		ps.println("G90 ; absolute positioning");
+		ps.println("G1 Z1 ; raise a bit");
+		gcodeScanner.close();
 	}
 
 	
