@@ -4,8 +4,6 @@ import java.io.FileNotFoundException;
 import java.io.PrintStream;
 import java.util.Scanner;
 
-
-
 // IMPORTANT!! REMEMBER THIS:
 // 50 < X < 220
 // 50 < Y < 220
@@ -86,20 +84,10 @@ public class PrinterWritingExtention {
 			else{
 				ps.println(nextLine);
 			}
-			// what up its me
 		}
-
-		// print file 
-		/*
-		Scanner sqareScanner = new Scanner(box_gcode);
-		while (sqareScanner.hasNext()){
-			System.out.println(sqareScanner.nextLine());
-		}
-		 */
 
 		 userInput.close();
 		 skeletonScanner.close();
-		
 	}
 
 	public static void addNewCharacter(character newChar, PrintStream ps) throws FileNotFoundException{;
@@ -111,6 +99,7 @@ public class PrinterWritingExtention {
 
 		ps.println();
 
+		// gets file
 		File gcode;
 		Scanner gcodeScanner;
 		try {
@@ -120,9 +109,32 @@ public class PrinterWritingExtention {
 			gcode = new File("C:\\Users\\" + user + "\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\characters\\box.gcode");
 			gcodeScanner = new Scanner(gcode);
 		}
-				
+
 		while(gcodeScanner.hasNext()){
-			 ps.println(gcodeScanner.nextLine());
+			String gcodeLine = gcodeScanner.nextLine();
+			
+			// changes size if line is not a comment or moves up
+			if(!gcodeLine.contains("G1 Z") && !gcodeLine.contains(";")){
+				String[] gcodeLineToArr = gcodeLine.split(" ");
+
+				// gets x and y and multiplys by size
+				double x = Double.parseDouble(gcodeLineToArr[1].substring(1)) * newChar.size;
+				double y = Double.parseDouble(gcodeLineToArr[2].substring(1)) * newChar.size;
+				gcodeLineToArr[1] = "X" + x;
+				gcodeLineToArr[2] = "Y" + y;
+
+				//round
+				x = Math.round(x * 10000.0) / 10000.0;
+                y = Math.round(y * 10000.0) / 10000.0;
+
+				// re-make line
+				gcodeLine = "";
+				for(int i = 0; i < gcodeLineToArr.length; i ++){
+					gcodeLine += gcodeLineToArr[i] + " ";
+				}
+
+			}
+			 ps.println(gcodeLine);
 		}
 
 		ps.println("G90 ; absolute positioning");

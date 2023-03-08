@@ -11,11 +11,11 @@ public class CircleToGcode {
          */
 
         double pi = 3.1415926;
-        double start = pi;
-        double end = 2 * pi;
+        double start = -1 * pi /2;
+        double end = 3 * pi / 2;
         boolean clockwise = false;
-        double rcos = 4;
-        double rsin = 4;
+        double rcos = 0.5;
+        double rsin = 0.5;
         int n = 50;
 
         ArrayList<double[]> pointsOnCurve = new ArrayList<double[]>();
