@@ -1,13 +1,3 @@
-; base skeleton code for writing
-
-G28 ; Home all axes
-G1 Z2 ; Move Z Axis up little to prevent scratching of Heat Bed
-; Stuff Go Here
-
-G0 X110 Y110; go to char orgin
-G0 Z0 ; lower to 0
-G91 ; relitive positioning
-
 ; U
 G1 Z1 
 G0 Y13 E0
@@ -39,11 +29,3 @@ G0 X0.1552 Y0.4777 E0.2
 G0 X0.0942 Y0.4935 E0.2
 G0 X0.0315 Y0.5013 E0.2
 G0 Y9 E0.2
-
-G90 ; absolute positioning
-G1 Z1 ; raise a bit
-
-G1 Z10 ;Raise Z
-G90 ;Absolute positioning
-G1 X0 Y220 ;Present print
-M84 X Y E ;Disable all steppers but Z

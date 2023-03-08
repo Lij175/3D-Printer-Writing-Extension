@@ -10,11 +10,61 @@ G0 X50 Y220; go to char orgin
 G0 Z0 ; lower to 0
 G91 ; relitive positioning
 
-; box
-G0 X8 E0.2 
-G0 Y13 E0.2 
-G0 X-8 E0.2 
-G0 Y-13 E0.2
+; C
+G1 Z1
+G0 X8 Y9 E0
+G1 Z-1 
+G0 X-0.0315 Y0.5013 E0.2
+G0 X-0.0942 Y0.4935 E0.2
+G0 X-0.1552 Y0.4777 E0.2
+G0 X-0.2139 Y0.4545 E0.2
+G0 X-0.2691 Y0.4241 E0.2
+G0 X-0.3202 Y0.3871 E0.2
+G0 X-0.3662 Y0.3439 E0.2
+G0 X-0.4064 Y0.2952 E0.2
+G0 X-0.4402 Y0.242 E0.2
+G0 X-0.467 Y0.1849 E0.2
+G0 X-0.4866 Y0.1249 E0.2
+G0 X-0.4983 Y0.063 E0.2
+G0 X-0.5024 Y0.0 E0.2
+G0 X-0.4983 Y-0.063 E0.2
+G0 X-0.4866 Y-0.1249 E0.2
+G0 X-0.467 Y-0.1849 E0.2
+G0 X-0.4402 Y-0.242 E0.2
+G0 X-0.4064 Y-0.2952 E0.2
+G0 X-0.3662 Y-0.3439 E0.2
+G0 X-0.3202 Y-0.3871 E0.2
+G0 X-0.2691 Y-0.4241 E0.2
+G0 X-0.2139 Y-0.4545 E0.2
+G0 X-0.1552 Y-0.4777 E0.2
+G0 X-0.0942 Y-0.4935 E0.2
+G0 X-0.0315 Y-0.5013 E0.2
+G0 X0 Y-5 E0.2
+G0 X0.0315 Y-0.5013 E0.2
+G0 X0.0942 Y-0.4935 E0.2
+G0 X0.1552 Y-0.4777 E0.2
+G0 X0.2139 Y-0.4545 E0.2
+G0 X0.2691 Y-0.4241 E0.2
+G0 X0.3202 Y-0.3871 E0.2
+G0 X0.3662 Y-0.3439 E0.2
+G0 X0.4064 Y-0.2952 E0.2
+G0 X0.4402 Y-0.242 E0.2
+G0 X0.467 Y-0.1849 E0.2
+G0 X0.4866 Y-0.1249 E0.2
+G0 X0.4983 Y-0.063 E0.2
+G0 X0.5024 Y0.0 E0.2
+G0 X0.4983 Y0.063 E0.2
+G0 X0.4866 Y0.1249 E0.2
+G0 X0.467 Y0.1849 E0.2
+G0 X0.4402 Y0.242 E0.2
+G0 X0.4064 Y0.2952 E0.2
+G0 X0.3662 Y0.3439 E0.2
+G0 X0.3202 Y0.3871 E0.2
+G0 X0.2691 Y0.4241 E0.2
+G0 X0.2139 Y0.4545 E0.2
+G0 X0.1552 Y0.4777 E0.2
+G0 X0.0942 Y0.4935 E0.2
+G0 X0.0315 Y0.5013 E0.2
 G90 ; absolute positioning
 G1 Z1 ; raise a bit
 
@@ -22,11 +72,16 @@ G0 X59 Y220; go to char orgin
 G0 Z0 ; lower to 0
 G91 ; relitive positioning
 
-; box
-G0 X8 E0.2 
-G0 Y13 E0.2 
-G0 X-8 E0.2 
-G0 Y-13 E0.2
+; H
+G0 X0 Y13 E0.2
+G1 Z1
+G0 X8 Y0 E0
+G1 Z-1
+G0 X0 Y-13 E0.2
+G1 Z1
+G0 X-8 Y6.5 E0
+G1 Z-1
+G0 X8 Y0 E0.2
 G90 ; absolute positioning
 G1 Z1 ; raise a bit
 
@@ -34,11 +89,16 @@ G0 X68 Y220; go to char orgin
 G0 Z0 ; lower to 0
 G91 ; relitive positioning
 
-; box
-G0 X8 E0.2 
-G0 Y13 E0.2 
-G0 X-8 E0.2 
-G0 Y-13 E0.2
+; I
+G0 X8 Y0 E0.2
+G1 Z1
+G0 X-4 Y0 E0
+G1 Z-1
+G0 X0 Y13 E0.2
+G1 Z1
+G0 X-4 Y0 E0
+G1 Z-1
+G0 X8 Y0 E0.2
 G90 ; absolute positioning
 G1 Z1 ; raise a bit
 
@@ -46,11 +106,75 @@ G0 X77 Y220; go to char orgin
 G0 Z0 ; lower to 0
 G91 ; relitive positioning
 
-; box
-G0 X8 E0.2 
-G0 Y13 E0.2 
-G0 X-8 E0.2 
-G0 Y-13 E0.2
+; C
+G1 Z1
+G0 X8 Y9 E0
+G1 Z-1 
+G0 X-0.0315 Y0.5013 E0.2
+G0 X-0.0942 Y0.4935 E0.2
+G0 X-0.1552 Y0.4777 E0.2
+G0 X-0.2139 Y0.4545 E0.2
+G0 X-0.2691 Y0.4241 E0.2
+G0 X-0.3202 Y0.3871 E0.2
+G0 X-0.3662 Y0.3439 E0.2
+G0 X-0.4064 Y0.2952 E0.2
+G0 X-0.4402 Y0.242 E0.2
+G0 X-0.467 Y0.1849 E0.2
+G0 X-0.4866 Y0.1249 E0.2
+G0 X-0.4983 Y0.063 E0.2
+G0 X-0.5024 Y0.0 E0.2
+G0 X-0.4983 Y-0.063 E0.2
+G0 X-0.4866 Y-0.1249 E0.2
+G0 X-0.467 Y-0.1849 E0.2
+G0 X-0.4402 Y-0.242 E0.2
+G0 X-0.4064 Y-0.2952 E0.2
+G0 X-0.3662 Y-0.3439 E0.2
+G0 X-0.3202 Y-0.3871 E0.2
+G0 X-0.2691 Y-0.4241 E0.2
+G0 X-0.2139 Y-0.4545 E0.2
+G0 X-0.1552 Y-0.4777 E0.2
+G0 X-0.0942 Y-0.4935 E0.2
+G0 X-0.0315 Y-0.5013 E0.2
+G0 X0 Y-5 E0.2
+G0 X0.0315 Y-0.5013 E0.2
+G0 X0.0942 Y-0.4935 E0.2
+G0 X0.1552 Y-0.4777 E0.2
+G0 X0.2139 Y-0.4545 E0.2
+G0 X0.2691 Y-0.4241 E0.2
+G0 X0.3202 Y-0.3871 E0.2
+G0 X0.3662 Y-0.3439 E0.2
+G0 X0.4064 Y-0.2952 E0.2
+G0 X0.4402 Y-0.242 E0.2
+G0 X0.467 Y-0.1849 E0.2
+G0 X0.4866 Y-0.1249 E0.2
+G0 X0.4983 Y-0.063 E0.2
+G0 X0.5024 Y0.0 E0.2
+G0 X0.4983 Y0.063 E0.2
+G0 X0.4866 Y0.1249 E0.2
+G0 X0.467 Y0.1849 E0.2
+G0 X0.4402 Y0.242 E0.2
+G0 X0.4064 Y0.2952 E0.2
+G0 X0.3662 Y0.3439 E0.2
+G0 X0.3202 Y0.3871 E0.2
+G0 X0.2691 Y0.4241 E0.2
+G0 X0.2139 Y0.4545 E0.2
+G0 X0.1552 Y0.4777 E0.2
+G0 X0.0942 Y0.4935 E0.2
+G0 X0.0315 Y0.5013 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X86 Y220; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; K
+G0 Y13 E0.2
+G1 Z1
+G0 X8 E0
+G1 Z-1
+G0 X-8 Y-6.5 E0.2
+G0 X8 Y-6.5 E0.2
 G90 ; absolute positioning
 G1 Z1 ; raise a bit
 
@@ -58,11 +182,17 @@ G0 X95 Y220; go to char orgin
 G0 Z0 ; lower to 0
 G91 ; relitive positioning
 
-; box
-G0 X8 E0.2 
-G0 Y13 E0.2 
-G0 X-8 E0.2 
-G0 Y-13 E0.2
+; E
+G1 Z1
+G0 X8 Y13 E0
+G1 Z-1
+G0 X-8 Y0 E0.2
+G0 X0 Y-13 E0.2
+G0 X8 Y0 E0.2
+G1 Z1
+G0 X-8 Y6.5 E0
+G1 Z-1
+G0 X6 Y0 E0.2
 G90 ; absolute positioning
 G1 Z1 ; raise a bit
 
@@ -70,23 +200,735 @@ G0 X104 Y220; go to char orgin
 G0 Z0 ; lower to 0
 G91 ; relitive positioning
 
-; box
-G0 X8 E0.2 
-G0 Y13 E0.2 
-G0 X-8 E0.2 
+; N
+G0 Y13 E0.2
+G0 X8 Y-13 E0.2
+G0 Y13 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X122 Y220; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; T
+G1 Z1
+G0 X8 Y13 E0
+G1 Z-1 
+G0 X-8 E0.2
+G1 Z1
+G0 X4 E0
+G1 Z-1
 G0 Y-13 E0.2
 G90 ; absolute positioning
 G1 Z1 ; raise a bit
 
-G0 X113 Y220; go to char orgin
+G0 X131 Y220; go to char orgin
 G0 Z0 ; lower to 0
 G91 ; relitive positioning
 
-; box
-G0 X8 E0.2 
-G0 Y13 E0.2 
-G0 X-8 E0.2 
+; E
+G1 Z1
+G0 X8 Y13 E0
+G1 Z-1
+G0 X-8 Y0 E0.2
+G0 X0 Y-13 E0.2
+G0 X8 Y0 E0.2
+G1 Z1
+G0 X-8 Y6.5 E0
+G1 Z-1
+G0 X6 Y0 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X140 Y220; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; N
+G0 Y13 E0.2
+G0 X8 Y-13 E0.2
+G0 Y13 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X149 Y220; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; D
+G0 X4 Y0 E0.2
+G0 X0.5013 Y0.0315 E0.2
+G0 X0.4935 Y0.0942 E0.2
+G0 X0.4777 Y0.1552 E0.2
+G0 X0.4545 Y0.2139 E0.2
+G0 X0.4241 Y0.2691 E0.2
+G0 X0.3871 Y0.3202 E0.2
+G0 X0.3439 Y0.3662 E0.2
+G0 X0.2952 Y0.4064 E0.2
+G0 X0.242 Y0.4402 E0.2
+G0 X0.1849 Y0.467 E0.2
+G0 X0.1249 Y0.4866 E0.2
+G0 X0.063 Y0.4983 E0.2
+G0 X0 Y5 E0.2
+G0 X-0.0315 Y0.5013 E0.2
+G0 X-0.0942 Y0.4935 E0.2
+G0 X-0.1552 Y0.4777 E0.2
+G0 X-0.2139 Y0.4545 E0.2
+G0 X-0.2691 Y0.4241 E0.2
+G0 X-0.3202 Y0.3871 E0.2
+G0 X-0.3662 Y0.3439 E0.2
+G0 X-0.4064 Y0.2952 E0.2
+G0 X-0.4402 Y0.242 E0.2
+G0 X-0.467 Y0.1849 E0.2
+G0 X-0.4866 Y0.1249 E0.2
+G0 X-0.4983 Y0.063 E0.2
+G0 X-4 Y0 E0.2
+G1 Z1
+G0 X1 Y0 E0
+G1 Z-1
+G0 X0 Y-13 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X158 Y220; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; E
+G1 Z1
+G0 X8 Y13 E0
+G1 Z-1
+G0 X-8 Y0 E0.2
+G0 X0 Y-13 E0.2
+G0 X8 Y0 E0.2
+G1 Z1
+G0 X-8 Y6.5 E0
+G1 Z-1
+G0 X6 Y0 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X167 Y220; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; P
+G0 Y13 E0.2
+G0 X4 E0.2
+G0 X0.5013 Y-0.0315 E0.2
+G0 X0.4935 Y-0.0942 E0.2
+G0 X0.4777 Y-0.1552 E0.2
+G0 X0.4545 Y-0.2139 E0.2
+G0 X0.4241 Y-0.2691 E0.2
+G0 X0.3871 Y-0.3202 E0.2
+G0 X0.3439 Y-0.3662 E0.2
+G0 X0.2952 Y-0.4064 E0.2
+G0 X0.242 Y-0.4402 E0.2
+G0 X0.1849 Y-0.467 E0.2
+G0 X0.1249 Y-0.4866 E0.2
+G0 X0.063 Y-0.4983 E0.2
+G0 X0.0 Y-0.5024 E0.2
+G0 X-0.063 Y-0.4983 E0.2
+G0 X-0.1249 Y-0.4866 E0.2
+G0 X-0.1849 Y-0.467 E0.2
+G0 X-0.242 Y-0.4402 E0.2
+G0 X-0.2952 Y-0.4064 E0.2
+G0 X-0.3439 Y-0.3662 E0.2
+G0 X-0.3871 Y-0.3202 E0.2
+G0 X-0.4241 Y-0.2691 E0.2
+G0 X-0.4545 Y-0.2139 E0.2
+G0 X-0.4777 Y-0.1552 E0.2
+G0 X-0.4935 Y-0.0942 E0.2
+G0 X-0.5013 Y-0.0315 E0.2
+G0 X-4 E0.2
+G1 Z1
+G0 X4 E0
+G1 Z-1
+G0 X4 Y-5 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X176 Y220; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; S
+G1 Z1
+G0 X8 Y10 E0
+G1 Z-1
+G0 X-0.0315 Y0.376 E0.2
+G0 X-0.0942 Y0.3701 E0.2
+G0 X-0.1552 Y0.3583 E0.2
+G0 X-0.2139 Y0.3409 E0.2
+G0 X-0.2691 Y0.3181 E0.2
+G0 X-0.3202 Y0.2902 E0.2
+G0 X-0.3662 Y0.2579 E0.2
+G0 X-0.4064 Y0.2215 E0.2
+G0 X-0.4402 Y0.1815 E0.2
+G0 X-0.467 Y0.1387 E0.2
+G0 X-0.4866 Y0.0937 E0.2
+G0 X-0.4983 Y0.0472 E0.2
+G0 X-0.5024 Y0.0 E0.2
+G0 X-0.4983 Y-0.0472 E0.2
+G0 X-0.4866 Y-0.0937 E0.2
+G0 X-0.467 Y-0.1387 E0.2
+G0 X-0.4402 Y-0.1815 E0.2
+G0 X-0.4064 Y-0.2215 E0.2
+G0 X-0.3662 Y-0.2579 E0.2
+G0 X-0.3202 Y-0.2902 E0.2
+G0 X-0.2691 Y-0.3181 E0.2
+G0 X-0.2139 Y-0.3409 E0.2
+G0 X-0.1552 Y-0.3583 E0.2
+G0 X-0.0942 Y-0.3701 E0.2
+G0 X-0.0315 Y-0.376 E0.2
+G0 Y-1 E0.2
+G0 X0.0315 Y-0.3133 E0.2
+G0 X0.0942 Y-0.3084 E0.2
+G0 X0.1552 Y-0.2986 E0.2
+G0 X0.2139 Y-0.2841 E0.2
+G0 X0.2691 Y-0.2651 E0.2
+G0 X0.3202 Y-0.2419 E0.2
+G0 X0.3662 Y-0.2149 E0.2
+G0 X0.4064 Y-0.1845 E0.2
+G0 X0.4402 Y-0.1513 E0.2
+G0 X0.467 Y-0.1155 E0.2
+G0 X0.4866 Y-0.0781 E0.2
+G0 X0.4983 Y-0.0394 E0.2
+G0 X0.5013 Y-0.0197 E0.2
+G0 X0.4935 Y-0.0588 E0.2
+G0 X0.4777 Y-0.0971 E0.2
+G0 X0.4545 Y-0.1336 E0.2
+G0 X0.4241 Y-0.1683 E0.2
+G0 X0.3871 Y-0.2001 E0.2
+G0 X0.3439 Y-0.2288 E0.2
+G0 X0.2952 Y-0.254 E0.2
+G0 X0.242 Y-0.2752 E0.2
+G0 X0.1849 Y-0.2919 E0.2
+G0 X0.1249 Y-0.304 E0.2
+G0 X0.063 Y-0.3115 E0.2
+G0 Y-1 E0.2
+G0 X-0.0315 Y-0.376 E0.2
+G0 X-0.0942 Y-0.3701 E0.2
+G0 X-0.1552 Y-0.3583 E0.2
+G0 X-0.2139 Y-0.3409 E0.2
+G0 X-0.2691 Y-0.3181 E0.2
+G0 X-0.3202 Y-0.2902 E0.2
+G0 X-0.3662 Y-0.2579 E0.2
+G0 X-0.4064 Y-0.2215 E0.2
+G0 X-0.4402 Y-0.1815 E0.2
+G0 X-0.467 Y-0.1387 E0.2
+G0 X-0.4866 Y-0.0937 E0.2
+G0 X-0.4983 Y-0.0472 E0.2
+G0 X-0.5024 Y0.0 E0.2
+G0 X-0.4983 Y0.0472 E0.2
+G0 X-0.4866 Y0.0937 E0.2
+G0 X-0.467 Y0.1387 E0.2
+G0 X-0.4402 Y0.1815 E0.2
+G0 X-0.4064 Y0.2215 E0.2
+G0 X-0.3662 Y0.2579 E0.2
+G0 X-0.3202 Y0.2902 E0.2
+G0 X-0.2691 Y0.3181 E0.2
+G0 X-0.2139 Y0.3409 E0.2
+G0 X-0.1552 Y0.3583 E0.2
+G0 X-0.0942 Y0.3701 E0.2
+G0 X-0.0315 Y0.376 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X50 Y205; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; Y
+G1 Z1 
+G0 Y13 E0
+G1 Z-1
+G0 X4 Y-4 E0.2
+G0 X4 Y4 E0.2
+G1 Z1 
+G0 X-4 Y-4 E0
+G1 Z-1
+G0 Y-9 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X59 Y205; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; U
+G1 Z1 
+G0 Y13 E0
+G1 Z-1
+G0 Y-9 E0.2
+G0 X0.0315 Y-0.5013 E0.2
+G0 X0.0942 Y-0.4935 E0.2
+G0 X0.1552 Y-0.4777 E0.2
+G0 X0.2139 Y-0.4545 E0.2
+G0 X0.2691 Y-0.4241 E0.2
+G0 X0.3202 Y-0.3871 E0.2
+G0 X0.3662 Y-0.3439 E0.2
+G0 X0.4064 Y-0.2952 E0.2
+G0 X0.4402 Y-0.242 E0.2
+G0 X0.467 Y-0.1849 E0.2
+G0 X0.4866 Y-0.1249 E0.2
+G0 X0.4983 Y-0.063 E0.2
+G0 X0.5024 Y0.0 E0.2
+G0 X0.4983 Y0.063 E0.2
+G0 X0.4866 Y0.1249 E0.2
+G0 X0.467 Y0.1849 E0.2
+G0 X0.4402 Y0.242 E0.2
+G0 X0.4064 Y0.2952 E0.2
+G0 X0.3662 Y0.3439 E0.2
+G0 X0.3202 Y0.3871 E0.2
+G0 X0.2691 Y0.4241 E0.2
+G0 X0.2139 Y0.4545 E0.2
+G0 X0.1552 Y0.4777 E0.2
+G0 X0.0942 Y0.4935 E0.2
+G0 X0.0315 Y0.5013 E0.2
+G0 Y9 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X68 Y205; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; M
+G0 X2 Y13 E0.2
+G0 X2 Y-13 E0.2
+G0 X2 Y13 E0.2
+G0 X2 Y-13 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X86 Y205; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; Y
+G1 Z1 
+G0 Y13 E0
+G1 Z-1
+G0 X4 Y-4 E0.2
+G0 X4 Y4 E0.2
+G1 Z1 
+G0 X-4 Y-4 E0
+G1 Z-1
+G0 Y-9 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X95 Y205; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; U
+G1 Z1 
+G0 Y13 E0
+G1 Z-1
+G0 Y-9 E0.2
+G0 X0.0315 Y-0.5013 E0.2
+G0 X0.0942 Y-0.4935 E0.2
+G0 X0.1552 Y-0.4777 E0.2
+G0 X0.2139 Y-0.4545 E0.2
+G0 X0.2691 Y-0.4241 E0.2
+G0 X0.3202 Y-0.3871 E0.2
+G0 X0.3662 Y-0.3439 E0.2
+G0 X0.4064 Y-0.2952 E0.2
+G0 X0.4402 Y-0.242 E0.2
+G0 X0.467 Y-0.1849 E0.2
+G0 X0.4866 Y-0.1249 E0.2
+G0 X0.4983 Y-0.063 E0.2
+G0 X0.5024 Y0.0 E0.2
+G0 X0.4983 Y0.063 E0.2
+G0 X0.4866 Y0.1249 E0.2
+G0 X0.467 Y0.1849 E0.2
+G0 X0.4402 Y0.242 E0.2
+G0 X0.4064 Y0.2952 E0.2
+G0 X0.3662 Y0.3439 E0.2
+G0 X0.3202 Y0.3871 E0.2
+G0 X0.2691 Y0.4241 E0.2
+G0 X0.2139 Y0.4545 E0.2
+G0 X0.1552 Y0.4777 E0.2
+G0 X0.0942 Y0.4935 E0.2
+G0 X0.0315 Y0.5013 E0.2
+G0 Y9 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X104 Y205; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; M
+G0 X2 Y13 E0.2
+G0 X2 Y-13 E0.2
+G0 X2 Y13 E0.2
+G0 X2 Y-13 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X122 Y205; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; I
+G0 X8 Y0 E0.2
+G1 Z1
+G0 X-4 Y0 E0
+G1 Z-1
+G0 X0 Y13 E0.2
+G1 Z1
+G0 X-4 Y0 E0
+G1 Z-1
+G0 X8 Y0 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X131 Y205; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; N
+G0 Y13 E0.2
+G0 X8 Y-13 E0.2
+G0 Y13 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X149 Y205; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; M
+G0 X2 Y13 E0.2
+G0 X2 Y-13 E0.2
+G0 X2 Y13 E0.2
+G0 X2 Y-13 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X158 Y205; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; Y
+G1 Z1 
+G0 Y13 E0
+G1 Z-1
+G0 X4 Y-4 E0.2
+G0 X4 Y4 E0.2
+G1 Z1 
+G0 X-4 Y-4 E0
+G1 Z-1
+G0 Y-9 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X176 Y205; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; T
+G1 Z1
+G0 X8 Y13 E0
+G1 Z-1 
+G0 X-8 E0.2
+G1 Z1
+G0 X4 E0
+G1 Z-1
 G0 Y-13 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X185 Y205; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; U
+G1 Z1 
+G0 Y13 E0
+G1 Z-1
+G0 Y-9 E0.2
+G0 X0.0315 Y-0.5013 E0.2
+G0 X0.0942 Y-0.4935 E0.2
+G0 X0.1552 Y-0.4777 E0.2
+G0 X0.2139 Y-0.4545 E0.2
+G0 X0.2691 Y-0.4241 E0.2
+G0 X0.3202 Y-0.3871 E0.2
+G0 X0.3662 Y-0.3439 E0.2
+G0 X0.4064 Y-0.2952 E0.2
+G0 X0.4402 Y-0.242 E0.2
+G0 X0.467 Y-0.1849 E0.2
+G0 X0.4866 Y-0.1249 E0.2
+G0 X0.4983 Y-0.063 E0.2
+G0 X0.5024 Y0.0 E0.2
+G0 X0.4983 Y0.063 E0.2
+G0 X0.4866 Y0.1249 E0.2
+G0 X0.467 Y0.1849 E0.2
+G0 X0.4402 Y0.242 E0.2
+G0 X0.4064 Y0.2952 E0.2
+G0 X0.3662 Y0.3439 E0.2
+G0 X0.3202 Y0.3871 E0.2
+G0 X0.2691 Y0.4241 E0.2
+G0 X0.2139 Y0.4545 E0.2
+G0 X0.1552 Y0.4777 E0.2
+G0 X0.0942 Y0.4935 E0.2
+G0 X0.0315 Y0.5013 E0.2
+G0 Y9 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X194 Y205; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; M
+G0 X2 Y13 E0.2
+G0 X2 Y-13 E0.2
+G0 X2 Y13 E0.2
+G0 X2 Y-13 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X50 Y190; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; T
+G1 Z1
+G0 X8 Y13 E0
+G1 Z-1 
+G0 X-8 E0.2
+G1 Z1
+G0 X4 E0
+G1 Z-1
+G0 Y-13 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X59 Y190; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; U
+G1 Z1 
+G0 Y13 E0
+G1 Z-1
+G0 Y-9 E0.2
+G0 X0.0315 Y-0.5013 E0.2
+G0 X0.0942 Y-0.4935 E0.2
+G0 X0.1552 Y-0.4777 E0.2
+G0 X0.2139 Y-0.4545 E0.2
+G0 X0.2691 Y-0.4241 E0.2
+G0 X0.3202 Y-0.3871 E0.2
+G0 X0.3662 Y-0.3439 E0.2
+G0 X0.4064 Y-0.2952 E0.2
+G0 X0.4402 Y-0.242 E0.2
+G0 X0.467 Y-0.1849 E0.2
+G0 X0.4866 Y-0.1249 E0.2
+G0 X0.4983 Y-0.063 E0.2
+G0 X0.5024 Y0.0 E0.2
+G0 X0.4983 Y0.063 E0.2
+G0 X0.4866 Y0.1249 E0.2
+G0 X0.467 Y0.1849 E0.2
+G0 X0.4402 Y0.242 E0.2
+G0 X0.4064 Y0.2952 E0.2
+G0 X0.3662 Y0.3439 E0.2
+G0 X0.3202 Y0.3871 E0.2
+G0 X0.2691 Y0.4241 E0.2
+G0 X0.2139 Y0.4545 E0.2
+G0 X0.1552 Y0.4777 E0.2
+G0 X0.0942 Y0.4935 E0.2
+G0 X0.0315 Y0.5013 E0.2
+G0 Y9 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X68 Y190; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; M
+G0 X2 Y13 E0.2
+G0 X2 Y-13 E0.2
+G0 X2 Y13 E0.2
+G0 X2 Y-13 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X86 Y190; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; P
+G0 Y13 E0.2
+G0 X4 E0.2
+G0 X0.5013 Y-0.0315 E0.2
+G0 X0.4935 Y-0.0942 E0.2
+G0 X0.4777 Y-0.1552 E0.2
+G0 X0.4545 Y-0.2139 E0.2
+G0 X0.4241 Y-0.2691 E0.2
+G0 X0.3871 Y-0.3202 E0.2
+G0 X0.3439 Y-0.3662 E0.2
+G0 X0.2952 Y-0.4064 E0.2
+G0 X0.242 Y-0.4402 E0.2
+G0 X0.1849 Y-0.467 E0.2
+G0 X0.1249 Y-0.4866 E0.2
+G0 X0.063 Y-0.4983 E0.2
+G0 X0.0 Y-0.5024 E0.2
+G0 X-0.063 Y-0.4983 E0.2
+G0 X-0.1249 Y-0.4866 E0.2
+G0 X-0.1849 Y-0.467 E0.2
+G0 X-0.242 Y-0.4402 E0.2
+G0 X-0.2952 Y-0.4064 E0.2
+G0 X-0.3439 Y-0.3662 E0.2
+G0 X-0.3871 Y-0.3202 E0.2
+G0 X-0.4241 Y-0.2691 E0.2
+G0 X-0.4545 Y-0.2139 E0.2
+G0 X-0.4777 Y-0.1552 E0.2
+G0 X-0.4935 Y-0.0942 E0.2
+G0 X-0.5013 Y-0.0315 E0.2
+G0 X-4 E0.2
+G1 Z1
+G0 X4 E0
+G1 Z-1
+G0 X4 Y-5 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X95 Y190; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; A
+G0 X4 Y13 E0.2
+G0 X4 Y-13 E0.2
+G1 Z1
+G0 X-6.154 Y6 E0
+G1 Z-1
+G0 X4.308 Y0 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X104 Y190; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; H
+G0 X0 Y13 E0.2
+G1 Z1
+G0 X8 Y0 E0
+G1 Z-1
+G0 X0 Y-13 E0.2
+G1 Z1
+G0 X-8 Y6.5 E0
+G1 Z-1
+G0 X8 Y0 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X113 Y190; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; H
+G0 X0 Y13 E0.2
+G1 Z1
+G0 X8 Y0 E0
+G1 Z-1
+G0 X0 Y-13 E0.2
+G1 Z1
+G0 X-8 Y6.5 E0
+G1 Z-1
+G0 X8 Y0 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X122 Y190; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; H
+G0 X0 Y13 E0.2
+G1 Z1
+G0 X8 Y0 E0
+G1 Z-1
+G0 X0 Y-13 E0.2
+G1 Z1
+G0 X-8 Y6.5 E0
+G1 Z-1
+G0 X8 Y0 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X131 Y190; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; H
+G0 X0 Y13 E0.2
+G1 Z1
+G0 X8 Y0 E0
+G1 Z-1
+G0 X0 Y-13 E0.2
+G1 Z1
+G0 X-8 Y6.5 E0
+G1 Z-1
+G0 X8 Y0 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X140 Y190; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; H
+G0 X0 Y13 E0.2
+G1 Z1
+G0 X8 Y0 E0
+G1 Z-1
+G0 X0 Y-13 E0.2
+G1 Z1
+G0 X-8 Y6.5 E0
+G1 Z-1
+G0 X8 Y0 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X149 Y190; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; H
+G0 X0 Y13 E0.2
+G1 Z1
+G0 X8 Y0 E0
+G1 Z-1
+G0 X0 Y-13 E0.2
+G1 Z1
+G0 X-8 Y6.5 E0
+G1 Z-1
+G0 X8 Y0 E0.2
+G90 ; absolute positioning
+G1 Z1 ; raise a bit
+
+G0 X158 Y190; go to char orgin
+G0 Z0 ; lower to 0
+G91 ; relitive positioning
+
+; H
+G0 X0 Y13 E0.2
+G1 Z1
+G0 X8 Y0 E0
+G1 Z-1
+G0 X0 Y-13 E0.2
+G1 Z1
+G0 X-8 Y6.5 E0
+G1 Z-1
+G0 X8 Y0 E0.2
 G90 ; absolute positioning
 G1 Z1 ; raise a bit
 
