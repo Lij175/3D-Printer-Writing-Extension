@@ -13,16 +13,16 @@ public class CircleToGcode {
         double pi = 3.1415926;
         double start = pi;
         double end = 2 * pi;
-        double[] center = {0, 0};
         boolean clockwise = false;
-        double r = 4;
+        double rcos = 4;
+        double rsin = 4;
         int n = 50;
 
         ArrayList<double[]> pointsOnCurve = new ArrayList<double[]>();
         if(clockwise){
             for(double i = start - (2 * pi / n); i >= end; i -= (2 * pi / n)){
-                double x = r * Math.cos(i) + center[0];
-                double y = r * Math.sin(i) + center[1];
+                double x = rcos * Math.cos(i);
+                double y = rsin * Math.sin(i);
 
                 x = Math.round(x * 10000.0) / 10000.0;
                 y = Math.round(y * 10000.0) / 10000.0;
@@ -32,8 +32,8 @@ public class CircleToGcode {
         } 
         else{
             for(double i = start + (2 * pi / n); i <= end; i += (2 * pi / n)){
-                double x = r * Math.cos(i) + center[0];
-                double y = r * Math.sin(i) + center[1];
+                double x = rcos * Math.cos(i);
+                double y = rsin * Math.sin(i);
 
                 x = Math.round(x * 10000.0) / 10000.0;
                 y = Math.round(y * 10000.0) / 10000.0;
@@ -49,7 +49,7 @@ public class CircleToGcode {
 
         System.out.println("\nGCODE:");
 
-        double[] prevPoint = new double[] {r * Math.cos(start) + center[0], r * Math.sin(start) + center[1]};
+        double[] prevPoint = new double[] {rcos * Math.cos(start), rsin * Math.sin(start)};
         for(int i = 0; i < pointsOnCurve.size(); i ++){
             double[] currPoint = pointsOnCurve.get(i);
             double x = currPoint[0] - prevPoint[0];

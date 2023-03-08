@@ -1,9 +1,6 @@
-import java.util.LinkedList;
-import java.util.Queue;
-
 public class character {
     double size;
-    double[][] points;
+    String gcode;
     int[] orgin;
     String name;
 
@@ -16,13 +13,5 @@ public class character {
         this.orgin = orgin;
     }
 
-    public Queue<String> getLines() {
-        Queue<String> gcodeLines = new LinkedList<>();
-        for(int i = 0; i < points.length; i ++){
-            gcodeLines.add("G0 X" + points[i][0] + " Y" + points[i][1] + " E0.2");
-        }
-        
-        return gcodeLines;
-    }
 }
 

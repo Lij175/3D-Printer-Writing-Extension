@@ -8,11 +8,12 @@ G0 X110 Y110; go to char orgin
 G0 Z0 ; lower to 0
 G91 ; relitive positioning
 
-; Z
-G0 X8 E0.2
-G0 Y13 E0.2
-G0 X-8 E0.2
-G0 Y-13 E0.2
+; X
+G0 X8 Y13 E0.2
+G1 Z1
+G0 X-8 E0
+G1 Z-1
+G0 X8 Y-13 E0.2
 
 G90 ; absolute positioning
 G1 Z1 ; raise a bit

@@ -1,7 +1,7 @@
+
 import java.io.File;
 import java.io.FileNotFoundException;
 import java.io.PrintStream;
-import java.util.Queue;
 import java.util.Scanner;
 
 
@@ -15,11 +15,11 @@ public class PrinterWritingExtention {
 	public static void main(String[] args) throws FileNotFoundException {
 
 		// files and stuff
-		File skeleton = new File("C:\\Users\\1082635\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\WitingBaseCode.gcode");
-		File box_gcode = new File("C:\\Users\\1082635\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\text.gcode");
+		//File skeleton = new File("C:\\Users\\1082635\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\WitingBaseCode.gcode");
+		//File box_gcode = new File("C:\\Users\\1082635\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\text.gcode");
 
-		//File skeleton = new File("C:\\Users\\ejyst\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\WitingBaseCode.gcode");
-		//File box_gcode = new File("C:\\Users\\ejyst\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\text.gcode");
+		File skeleton = new File("C:\\Users\\ejyst\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\WitingBaseCode.gcode");
+		File box_gcode = new File("C:\\Users\\ejyst\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\text.gcode");
 
 		// scanners
 		Scanner skeletonScanner = new Scanner(skeleton);
@@ -89,22 +89,18 @@ public class PrinterWritingExtention {
 	}
 
 	public static void addNewCharacter(character newChar, PrintStream ps){
-				Queue<String> gcodeLines = newChar.getLines();
+				String gcodeLines = newChar.gcode;
 
 				// one character
 				ps.println();
 				ps.println("G0 X" + newChar.orgin[0] + " Y" + newChar.orgin[1] + "; go to char orgin");
 				ps.println("G0 Z0 ; lower to 0");
-
 				ps.println("G91 ; relitive positioning");
 
 				ps.println();
 				ps.println("; " + newChar.name);
 
-				for(int i = 0; i < gcodeLines.size(); i ++){
-					ps.println(gcodeLines.peek());
-					gcodeLines.add(gcodeLines.remove());
-				}
+				ps.println(gcodeLines);
 
 				ps.println("G90 ; absolute positioning");
 				ps.println("G1 Z1 ; raise a bit");
