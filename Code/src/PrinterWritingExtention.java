@@ -9,15 +9,8 @@ import java.util.Scanner;
 // 50 < Y < 220
 public class PrinterWritingExtention {
 
-	public static String user = "";
+	public static String user = "ejyst";
 	public static void main(String[] args) throws FileNotFoundException {
-
-		try {
-			new File("C:\\Users\\1082635\\Documents\\GitHub\\3D-Printer-Writing-Extension");
-			user = "1082635";
-		} catch (Exception FileNotFoundException) {
-			user = "ejyst";
-		}
 		// files and stuff
 		File skeleton = new File("C:\\Users\\" + user + "\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\WitingBaseCode.gcode");
 		File box_gcode = new File("C:\\Users\\" + user + "\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\text.gcode");
