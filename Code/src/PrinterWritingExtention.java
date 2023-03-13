@@ -4,12 +4,13 @@ import java.io.FileNotFoundException;
 import java.io.PrintStream;
 import java.util.Scanner;
 
+
 // IMPORTANT!! REMEMBER THIS:
 // 50 < X < 220
 // 50 < Y < 220
 public class PrinterWritingExtention {
 
-	public static String user = "ejyst";
+	public static String user = "1082635";
 	public static void main(String[] args) throws FileNotFoundException {
 		// files and stuff
 		File skeleton = new File("C:\\Users\\" + user + "\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\WitingBaseCode.gcode");
