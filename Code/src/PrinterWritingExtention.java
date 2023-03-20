@@ -14,13 +14,15 @@ public class PrinterWritingExtention {
 	public static void main(String[] args) throws FileNotFoundException {
 		// files and stuff
 		File skeleton = new File("C:\\Users\\" + user + "\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\WitingBaseCode.gcode");
-		File box_gcode = new File("C:\\Users\\" + user + "\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\text.gcode");
+		File text_gcode = new File("C:\\Users\\" + user + "\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\text.gcode");
+		File text_txt = new File("C:\\Users\\" + user + "\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\text.txt");
 
 		// scanners
+		Scanner textPs = new Scanner(text_txt);
 		Scanner skeletonScanner = new Scanner(skeleton);
-		PrintStream ps = new PrintStream(box_gcode);
+		PrintStream ps = new PrintStream(text_gcode);
 		Scanner userInput = new Scanner(System.in);
- 
+		
 		// text and specs
 		System.out.print("What would you like to print: ");
 		String text = userInput.nextLine();
