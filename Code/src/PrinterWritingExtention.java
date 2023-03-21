@@ -24,12 +24,30 @@ public class PrinterWritingExtention {
 		Scanner userInput = new Scanner(System.in);
 		
 		// text and specs
-		System.out.print("What would you like to print: ");
-		String text = userInput.nextLine();
+		System.out.print("Text input(0) or read file(1): ");
+		boolean fileText = Integer.parseInt(userInput.nextLine()) == 1;
+
+		String text = "";
+		if(!fileText){
+			System.out.print("What would you like to print: ");
+			text = userInput.nextLine();
+		}
 
 		System.out.print("font size?: ");
-		double fontSize = userInput.nextDouble();
+		double fontSize = Double.parseDouble(userInput.nextLine());
 
+		if(!fileText){
+			writeUserText(skeletonScanner, text, fontSize, ps);
+		} else{
+
+		}
+
+		userInput.close();
+		skeletonScanner.close();
+	}
+
+	// takes the users text and turns it into gcode
+	public static void writeUserText(Scanner skeletonScanner, String text, double fontSize, PrintStream ps) throws FileNotFoundException{
 		//loop to write gcode
 		while (skeletonScanner.hasNext()) {
 			String nextLine = skeletonScanner.nextLine();
@@ -43,7 +61,6 @@ public class PrinterWritingExtention {
 				int x = 50;
 				int y = 220;
 				String[] words = text.split(" ");
-
 
 				for(String word : words){
 					// if word length goes past bound go to new line
@@ -87,12 +104,10 @@ public class PrinterWritingExtention {
 				ps.println(nextLine);
 			}
 		}
-
-		 userInput.close();
-		 skeletonScanner.close();
 	}
 
-	public static void addNewCharacter(character newChar, PrintStream ps) throws FileNotFoundException{;
+	// gets and adds new character gcode
+	public static void addNewCharacter(character newChar, PrintStream ps) throws FileNotFoundException{
 		// one character
 		ps.println();
 		ps.println("G0 X" + newChar.orgin[0] + " Y" + newChar.orgin[1] + "; go to char orgin");
@@ -143,7 +158,5 @@ public class PrinterWritingExtention {
 		ps.println("G1 Z1 ; raise a bit");
 		gcodeScanner.close();
 	}
-
-	
 
 }
