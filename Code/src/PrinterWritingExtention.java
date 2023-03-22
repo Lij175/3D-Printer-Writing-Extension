@@ -111,7 +111,7 @@ public class PrinterWritingExtention {
 		// one character
 		ps.println();
 		ps.println("G0 X" + newChar.orgin[0] + " Y" + newChar.orgin[1] + "; go to char orgin");
-		ps.println("G0 Z0 ; lower to 0");
+		ps.println("G0 Z1 ; lower to 1");
 		ps.println("G91 ; relitive positioning");
 
 		ps.println();
