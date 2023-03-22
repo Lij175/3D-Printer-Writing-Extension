@@ -92,7 +92,6 @@ public class PrinterWritingExtention {
 		}
 	}
 
-
 	// takes the users text and turns it into gcode
 	public static void writeUserText(Scanner skeletonScanner, String text, double fontSize, PrintStream ps) throws FileNotFoundException{
 		//loop to write gcode
