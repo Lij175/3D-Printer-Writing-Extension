@@ -18,11 +18,11 @@ public class PrinterWritingExtention {
 		File text_txt = new File("C:\\Users\\" + user + "\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\text.txt");
 
 		// scanners
-		Scanner textPs = new Scanner(text_txt);
+		Scanner textScanner = new Scanner(text_txt);
 		Scanner skeletonScanner = new Scanner(skeleton);
 		PrintStream ps = new PrintStream(text_gcode);
 		Scanner userInput = new Scanner(System.in);
-		
+
 		// text and specs
 		System.out.print("Text input(0) or read file(1): ");
 		boolean fileText = Integer.parseInt(userInput.nextLine()) == 1;
@@ -39,12 +39,59 @@ public class PrinterWritingExtention {
 		if(!fileText){
 			writeUserText(skeletonScanner, text, fontSize, ps);
 		} else{
-
+			writeTextFile(skeletonScanner, fontSize, ps, textScanner);
 		}
 
 		userInput.close();
 		skeletonScanner.close();
 	}
+
+	// takes the text file and turns it into gcode
+	public static void writeTextFile(Scanner skeletonScanner, double fontSize, PrintStream ps, Scanner textScanner) throws FileNotFoundException{
+		//loop to write gcode
+		while (skeletonScanner.hasNext()) {
+			String nextLine = skeletonScanner.nextLine();
+
+			// will copy stuff from base code unless stuff needs to go here
+			if(nextLine.equals("; Stuff Go Here")){
+				// print stuff go here
+				ps.println(nextLine);
+
+				// initialization of stuff
+				int x = 50;
+				int y = 220;
+				while(textScanner.hasNext()){
+					String newLine = textScanner.nextLine();
+					// loops through each char in the line
+					for(int i = 0; i < newLine.length(); i++){
+						char character = newLine.charAt(i);
+						
+						// space if space
+						if(character == ' '){
+							x += (fontSize * 8) + 2;
+						} 
+						// print new char if not a space
+						else {
+							character newChar = new character(fontSize, new int[] {x, y}, character + "");
+							addNewCharacter(newChar, ps);
+							x += (fontSize * 8) + 2;
+						}
+					}
+
+					// go to new line
+					y -= (fontSize * 13) + 2;
+					x = 50;
+				}
+
+			}
+
+			// copy base code
+			else{
+				ps.println(nextLine);
+			}
+		}
+	}
+
 
 	// takes the users text and turns it into gcode
 	public static void writeUserText(Scanner skeletonScanner, String text, double fontSize, PrintStream ps) throws FileNotFoundException{
