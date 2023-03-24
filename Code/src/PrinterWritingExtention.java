@@ -11,7 +11,7 @@ import java.util.Scanner;
 // 50 < Y < 220
 public class PrinterWritingExtention {
 
-	public static String user = "1082635";
+	public static String user = "ejyst";
 	public static void main(String[] args) throws FileNotFoundException {
 		// files and stuff
 		File skeleton = new File("C:\\Users\\" + user + "\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\WitingBaseCode.gcode");
