@@ -10,6 +10,7 @@ import java.util.Scanner;
 // 50 < X < 220
 // 50 < Y < 220
 public class PrinterWritingExtention {
+	//test
 
 	public static String user = "ejyst";
 	public static void main(String[] args) throws FileNotFoundException {

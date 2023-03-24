@@ -6,5 +6,8 @@
 		</attributes>
 	</classpathentry>
 	<classpathentry kind="src" path="src"/>
+	<classpathentry kind="lib" path="gcodes/text.gcode"/>
+	<classpathentry kind="lib" path="gcodes/text.txt"/>
+	<classpathentry kind="lib" path="gcodes/WitingBaseCode.gcode"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>
