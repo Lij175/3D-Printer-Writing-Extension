@@ -190,7 +190,7 @@ public class PrinterWritingExtention {
 			if (!gcodeLine.contains("G1 Z") && !gcodeLine.contains(";")) {
 				String[] gcodeLineToArr = gcodeLine.split(" ");
 
-				// gets x and y and multiplys by size
+				// gets x and y and multiples by size
 				double x = Double.parseDouble(gcodeLineToArr[1].substring(1)) * newChar.size;
 				double y = Double.parseDouble(gcodeLineToArr[2].substring(1)) * newChar.size;
 				gcodeLineToArr[1] = "X" + x;
