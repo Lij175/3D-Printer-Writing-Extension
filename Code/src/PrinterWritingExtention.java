@@ -44,7 +44,7 @@ public class PrinterWritingExtention {
 		}
 
 		userInput.close();
-		skeletonScanner.close();
+		skeletonScanner.close(); 
 	}
 
 	// takes the text file and turns it into gcode
