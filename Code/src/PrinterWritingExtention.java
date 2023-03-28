@@ -20,7 +20,7 @@ public class PrinterWritingExtention {
 				"C:\\Users\\" + user + "\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\text.gcode");
 		File text_txt = new File(
 				"C:\\Users\\" + user + "\\Documents\\GitHub\\3D-Printer-Writing-Extension\\gcodes\\text.txt");
-
+		
 		// scanners
 		Scanner textScanner = new Scanner(text_txt);
 		Scanner skeletonScanner = new Scanner(skeleton);
