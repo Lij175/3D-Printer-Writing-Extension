@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ; base skeleton code for writing
 
 G28 ; Home all axes
@@ -432,3 +433,5 @@ G1 Z10 ;Raise Z
 G90 ;Absolute positioning
 G1 X0 Y220 ;Present print
 M84 X Y E ;Disable all steppers but Z
+=======
+>>>>>>> 6cd55bbb5caa39553389945e60ff235c2ba1324f

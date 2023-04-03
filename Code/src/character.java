@@ -2,7 +2,7 @@ public class character {
     double size;
     int[] orgin;
     String name;
-
+ 
     character(){
         size = 1;
     }
